@@ -1,7 +1,7 @@
 {
   "name": "PhysioHome Clinic",
   "short_name": "PhysioHome",
-  "description": "Home visit physiotherapy in Delhi",
+  "description": "Home visit physiotherapy in Mumbai",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAF8",

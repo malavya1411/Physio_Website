@@ -107,7 +107,7 @@ export default function Contact() {
             {/* Grayscale map embed — fallback to info card if no URL */}
             <div
               className="flex-1 bg-[#F0FDFA] flex flex-col items-center justify-center gap-4 p-8 min-h-64"
-              aria-label="Map placeholder — serving North and West Delhi"
+              aria-label="Map placeholder — serving Mumbai and Suburbs"
             >
               <svg
                 viewBox="0 0 80 80"
@@ -133,7 +133,7 @@ export default function Contact() {
                 We travel to your home — no fixed location required.
               </p>
               <a
-                href={`https://maps.google.com/?q=North+Delhi`}
+                href={`https://maps.google.com/?q=Mumbai`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-inter font-medium text-[#0F766E] text-sm transition-subtle hover:underline"

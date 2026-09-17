@@ -187,7 +187,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
             <SectionHeading
               title="What patients say"
-              subtitle="Real stories from patients across Delhi."
+              subtitle="Real stories from patients across Mumbai."
             />
             <Link
               to="/testimonials"

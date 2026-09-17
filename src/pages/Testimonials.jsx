@@ -9,7 +9,7 @@ export default function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           title="Patient Stories"
-          subtitle="Hear from patients who recovered comfortably at home across Delhi."
+          subtitle="Hear from patients who recovered comfortably at home across Mumbai."
           centered
         />
 
@@ -31,7 +31,7 @@ export default function Testimonials() {
             className="font-inter text-[#1F2937] text-base mb-6"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Join hundreds of patients healing at home across Delhi.
+            Join hundreds of patients healing at home across Mumbai.
           </p>
           <div className="flex justify-center">
             <CTAButtons />
