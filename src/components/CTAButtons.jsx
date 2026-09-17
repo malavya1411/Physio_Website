@@ -46,7 +46,7 @@ export default function CTAButtons({
         className={`${base} ${sizes[size]} ${width} bg-[#0A192F] text-white hover:bg-[#112240] border border-[#0A192F] shadow-sm hover:shadow-md active:scale-[0.99]`}
       >
         <PhoneIcon />
-        Call Now
+        Call
       </a>
       <a
         href={href2}
@@ -56,7 +56,7 @@ export default function CTAButtons({
         className={`${base} ${sizes[size]} ${width} bg-white text-[#0A192F] border border-neutral-300 hover:border-[#0A192F] hover:bg-neutral-50 shadow-sm hover:shadow active:scale-[0.99]`}
       >
         <WhatsAppIcon />
-        Book on WhatsApp
+        WhatsApp
       </a>
     </div>
   )
