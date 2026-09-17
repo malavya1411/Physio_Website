@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────
+   Base
+────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #FAFAF8;
+  color: #1F2937;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ──────────────────────────────────────────────
+   Typography helpers
+────────────────────────────────────────────── */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-inter   { font-family: 'Inter', sans-serif; }
+.font-lora    { font-family: 'Lora', serif; }
+
+/* ──────────────────────────────────────────────
+   Color tokens (plain CSS vars for convenience)
+────────────────────────────────────────────── */
+:root {
+  --teal: #0F766E;
+  --bg: #FAFAF8;
+  --text: #1F2937;
+  --white: #FFFFFF;
+}
+
+/* ──────────────────────────────────────────────
+   Focus visible — teal outline
+────────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* ──────────────────────────────────────────────
+   Transitions — max 200ms per plan
+────────────────────────────────────────────── */
+.transition-subtle {
+  transition: all 200ms ease;
+}
+
+/* ──────────────────────────────────────────────
+   Card shadow (single-color, minimal)
+────────────────────────────────────────────── */
+.card-shadow {
+  box-shadow: 0 1px 6px 0 rgba(15, 118, 110, 0.10);
+}
+
+/* ──────────────────────────────────────────────
+   Page wrapper — adds mobile bottom padding
+   so sticky CTA bar doesn't overlap content
+────────────────────────────────────────────── */
+.page-wrapper {
+  padding-bottom: 5rem; /* pb-20 equivalent on mobile */
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    padding-bottom: 0;
+  }
+}

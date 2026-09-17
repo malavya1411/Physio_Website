@@ -1,0 +1,16 @@
+{
+  "name": "PhysioHome Clinic",
+  "short_name": "PhysioHome",
+  "description": "Home visit physiotherapy in Delhi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#0F766E",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
