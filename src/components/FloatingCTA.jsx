@@ -63,7 +63,7 @@ export default function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact on WhatsApp"
-        className="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#0F766E] items-center justify-center shadow-lg transition-subtle hover:scale-110 hover:bg-[#0d6560]"
+        className="hidden md:flex fixed bottom-7 right-7 z-50 w-12 h-12 rounded-full bg-[#0F766E] items-center justify-center shadow-[0_4px_20px_rgba(15,118,110,0.35)] transition-all duration-300 hover:scale-105 hover:bg-[#0d6560] active:scale-95"
       >
         <WhatsAppIconWhite />
       </a>

@@ -37,63 +37,87 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="bg-[#FAFAF8] min-h-[calc(100vh-4rem)] flex items-center py-12 lg:py-0 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 py-8">
-          {/* Text */}
-          <div className="flex-1 text-left max-w-2xl">
+      <section className="relative bg-[#FAFAF8] min-h-[calc(100vh-4rem)] flex items-center py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Subtle background botanical line art */}
+        <svg
+          className="absolute -bottom-10 -left-10 w-72 h-72 text-[#0F766E]/[0.08] pointer-events-none select-none"
+          viewBox="0 0 200 200"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          aria-hidden="true"
+        >
+          <path d="M20,180 C40,110 100,50 180,20" />
+          <path d="M70,135 C60,110 80,90 105,95 C115,100 120,115 110,125 C95,140 75,140 70,135 Z" />
+          <path d="M120,85 C115,60 135,45 155,55 C165,65 165,80 150,90 C135,100 120,95 120,85 Z" />
+          <path d="M40,165 C30,145 45,130 65,135 C75,140 80,150 70,160 C60,170 45,170 40,165 Z" />
+        </svg>
+
+        <div className="max-w-[1240px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 relative z-10">
+          {/* Left Text */}
+          <div className="flex-1 text-left max-w-xl">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2.5 mb-4">
+              <span className="w-6 h-[2px] bg-[#0F766E]/60 rounded-full" />
+              <span
+                className="font-inter font-semibold text-xs sm:text-[13px] tracking-widest text-[#0F766E] uppercase"
+                style={{ fontFamily: 'Inter, sans-serif' }}
+              >
+                Care Comes Home
+              </span>
+            </div>
+
+            {/* Headline */}
             <h1
-              className="font-poppins font-bold text-[#1F2937] leading-[1.12] mb-6 tracking-tight"
+              className="font-poppins font-bold text-[#111827] leading-[1.08] mb-5 tracking-tight"
               style={{
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: 'clamp(2.5rem, 6vw, 4.25rem)',
+                fontSize: 'clamp(2.5rem, 5.5vw, 3.85rem)',
               }}
             >
-              {clinic.tagline}
+              Physiotherapy,<br />at your doorstep.
             </h1>
+
+            {/* Supporting sentence */}
             <p
-              className="font-lora italic text-[#1F2937] text-xl sm:text-2xl mb-10 max-w-xl leading-relaxed opacity-90"
+              className="font-lora italic text-[#374151] text-lg sm:text-xl lg:text-[22px] leading-relaxed mb-8 max-w-lg font-normal opacity-90"
               style={{ fontFamily: 'Lora, serif' }}
             >
-              Expert physiotherapy at your door — no commute, no waiting rooms, just healing.
+              Expert physiotherapy at home,<br className="hidden sm:inline" /> without the commute.
             </p>
+
+            {/* CTAs */}
             <CTAButtons size="lg" />
           </div>
 
-          {/* Hero illustration */}
-          <div className="flex-1 flex justify-center lg:justify-end w-full">
-            <div className="w-full max-w-md lg:max-w-lg bg-white rounded-3xl card-shadow p-8 sm:p-12 flex flex-col items-center gap-6">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-56 h-56 sm:w-64 sm:h-64 text-[#0F766E]"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="Physiotherapist illustration"
-              >
-                {/* Clean house + medical cross illustration */}
-                <rect x="30" y="100" width="140" height="90" rx="8" fill="#F0FDFA" stroke="#0F766E" strokeWidth="3"/>
-                <polygon points="20,105 100,40 180,105" fill="#CCFBF1" stroke="#0F766E" strokeWidth="3"/>
-                <rect x="80" y="140" width="40" height="50" rx="4" fill="#0F766E"/>
-                {/* Medical cross */}
-                <rect x="88" y="65" width="24" height="8" rx="2" fill="#0F766E"/>
-                <rect x="96" y="57" width="8" height="24" rx="2" fill="#0F766E"/>
-                {/* Window */}
-                <rect x="45" y="120" width="35" height="30" rx="4" fill="white" stroke="#0F766E" strokeWidth="2"/>
-                <line x1="62" y1="120" x2="62" y2="150" stroke="#0F766E" strokeWidth="2"/>
-                <line x1="45" y1="135" x2="80" y2="135" stroke="#0F766E" strokeWidth="2"/>
-              </svg>
-              <div className="text-center">
-                <p
-                  className="font-poppins font-semibold text-[#0F766E] text-2xl"
-                  style={{ fontFamily: 'Poppins, sans-serif' }}
-                >
-                  We come to you
-                </p>
-                <p
-                  className="font-inter text-[#1F2937] text-base sm:text-lg mt-2 font-medium"
+          {/* Right Visual */}
+          <div className="flex-1 flex justify-center lg:justify-end w-full relative">
+            {/* Soft muted background glow */}
+            <div className="absolute -top-6 -right-6 w-64 h-64 bg-[#CCFBF1]/40 rounded-full blur-3xl pointer-events-none -z-10" />
+            <div className="absolute -bottom-6 -left-6 w-56 h-56 bg-[#0F766E]/[0.08] rounded-full blur-2xl pointer-events-none -z-10" />
+
+            {/* Organic rounded image container */}
+            <div className="relative w-full max-w-md lg:max-w-lg rounded-[2.25rem] sm:rounded-[2.5rem] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.06)] border border-[#1F2937]/[0.06] bg-white group">
+              <img
+                src="/hero-physio.jpg"
+                alt="Physiotherapist assisting senior patient at home"
+                className="w-full h-auto object-cover max-h-[440px] sm:max-h-[490px] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                width="600"
+                height="450"
+                loading="eager"
+              />
+
+              {/* Understated Location Pill */}
+              <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 bg-[#FAFAF8]/95 backdrop-blur-md border border-white/80 px-4 py-2.5 rounded-full shadow-sm flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 text-[#0F766E] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M11.54 22.351A24.25 24.25 0 0 0 18 13.917C18 9.544 14.418 6 10 6S2 9.544 2 13.917a24.25 24.25 0 0 0 6.46 8.434.75.75 0 0 0 1.08 0l2-2zM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5z" clipRule="evenodd" />
+                </svg>
+                <span
+                  className="font-inter text-xs sm:text-[13px] font-medium text-[#1F2937] tracking-tight"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
-                  {clinic.serviceAreas}
-                </p>
+                  Home visits across Mumbai &amp; suburbs
+                </span>
               </div>
             </div>
           </div>
@@ -124,7 +148,7 @@ export default function Home() {
 
       {/* ── How it Works ─────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <SectionHeading
             title="How it works"
             subtitle="Getting physiotherapy at home is simple — 3 easy steps."
@@ -159,7 +183,7 @@ export default function Home() {
 
       {/* ── Services Preview ─────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
             <SectionHeading
               title="Our Services"
@@ -183,7 +207,7 @@ export default function Home() {
 
       {/* ── Testimonials Preview ──────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1240px] mx-auto">
           <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
             <SectionHeading
               title="What patients say"
