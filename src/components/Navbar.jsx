@@ -32,8 +32,8 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handler)
   }, [])
 
-  const linkBase = 'font-inter font-medium text-[#1F2937] text-sm transition-subtle hover:text-[#0F766E]'
-  const activeClass = 'text-[#0F766E]'
+  const linkBase = 'font-inter font-medium text-[#1F2937] text-sm transition-subtle hover:text-[#0A192F]'
+  const activeClass = 'text-[#0A192F]'
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAFAF8]/95 backdrop-blur-sm border-b border-[#1F2937]/[0.07]">
@@ -75,8 +75,8 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `font-inter text-[15px] transition-all duration-150 ${
                       isActive
-                        ? 'font-semibold text-[#0F766E]'
-                        : 'font-normal text-[#374151] hover:text-[#0F766E]'
+                        ? 'font-semibold text-[#0A192F]'
+                        : 'font-normal text-[#374151] hover:text-[#0A192F]'
                     }`
                   }
                 >
@@ -88,7 +88,7 @@ export default function Navbar() {
             <a
               href={telLink()}
               aria-label="Call the clinic now"
-              className="bg-[#0F766E] text-white font-inter font-medium text-[14px] px-5 py-2.5 rounded-xl transition-all duration-200 hover:bg-[#0d6560] shadow-sm hover:shadow flex items-center gap-2"
+              className="bg-[#0A192F] text-white font-inter font-medium text-[14px] px-5 py-2.5 rounded-xl transition-all duration-200 hover:bg-[#112240] shadow-sm hover:shadow flex items-center gap-2"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -101,7 +101,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             id="navbar-hamburger"
-            className="md:hidden text-[#1F2937] p-2 rounded-lg transition-colors hover:bg-black/5 hover:text-[#0F766E]"
+            className="md:hidden text-[#1F2937] p-2 rounded-lg transition-colors hover:bg-black/5 hover:text-[#0A192F]"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
@@ -123,8 +123,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `block py-3 px-3.5 rounded-xl font-inter text-base ${
                     isActive
-                      ? 'bg-[#0F766E]/10 font-medium text-[#0F766E]'
-                      : 'text-[#374151] hover:bg-[#0F766E]/5 hover:text-[#0F766E]'
+                      ? 'bg-[#0A192F]/10 font-medium text-[#0A192F]'
+                      : 'text-[#374151] hover:bg-[#0A192F]/5 hover:text-[#0A192F]'
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -135,7 +135,7 @@ export default function Navbar() {
             <a
               href={telLink()}
               aria-label="Call the clinic"
-              className="mt-3 flex items-center justify-center gap-2 bg-[#0F766E] text-white font-inter font-medium text-base px-5 py-3.5 rounded-xl transition-all hover:bg-[#0d6560] shadow-sm"
+              className="mt-3 flex items-center justify-center gap-2 bg-[#0A192F] text-white font-inter font-medium text-base px-5 py-3.5 rounded-xl transition-all hover:bg-[#112240] shadow-sm"
               style={{ fontFamily: 'Inter, sans-serif' }}
               onClick={() => setMenuOpen(false)}
             >

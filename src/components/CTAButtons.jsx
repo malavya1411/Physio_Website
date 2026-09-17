@@ -30,7 +30,7 @@ export default function CTAButtons({
   const href1 = telHref || telLink()
   const href2 = waHref  || waLink(WA_GENERAL)
 
-  const base = 'inline-flex items-center justify-center font-inter font-medium rounded-xl transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]'
+  const base = 'inline-flex items-center justify-center font-inter font-medium rounded-xl transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0A192F]'
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
@@ -43,7 +43,7 @@ export default function CTAButtons({
       <a
         href={href1}
         aria-label="Call the clinic"
-        className={`${base} ${sizes[size]} ${width} bg-[#0F766E] text-white hover:bg-[#0d6560] border border-[#0F766E] shadow-sm hover:shadow-md active:scale-[0.99]`}
+        className={`${base} ${sizes[size]} ${width} bg-[#0A192F] text-white hover:bg-[#112240] border border-[#0A192F] shadow-sm hover:shadow-md active:scale-[0.99]`}
       >
         <PhoneIcon />
         Call Now
@@ -53,7 +53,7 @@ export default function CTAButtons({
         aria-label="Contact on WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
-        className={`${base} ${sizes[size]} ${width} bg-white text-[#0F766E] border border-[#0F766E]/60 hover:border-[#0F766E] hover:bg-[#0F766E]/[0.04] shadow-sm hover:shadow active:scale-[0.99]`}
+        className={`${base} ${sizes[size]} ${width} bg-white text-[#0A192F] border border-neutral-300 hover:border-[#0A192F] hover:bg-neutral-50 shadow-sm hover:shadow active:scale-[0.99]`}
       >
         <WhatsAppIcon />
         Book on WhatsApp

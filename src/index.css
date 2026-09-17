@@ -34,17 +34,17 @@ body {
    Color tokens (plain CSS vars for convenience)
 ────────────────────────────────────────────── */
 :root {
-  --teal: #0F766E;
+  --navy: #0A192F;
   --bg: #FAFAF8;
   --text: #1F2937;
   --white: #FFFFFF;
 }
 
 /* ──────────────────────────────────────────────
-   Focus visible — teal outline
+   Focus visible — navy outline
 ────────────────────────────────────────────── */
 *:focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--navy);
   outline-offset: 2px;
 }
 
@@ -59,7 +59,7 @@ body {
    Card shadow (single-color, minimal)
 ────────────────────────────────────────────── */
 .card-shadow {
-  box-shadow: 0 1px 6px 0 rgba(15, 118, 110, 0.10);
+  box-shadow: 0 1px 8px 0 rgba(10, 25, 47, 0.07);
 }
 
 /* ──────────────────────────────────────────────

@@ -12,10 +12,10 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <p
-              className="font-poppins font-bold text-[#0F766E] text-lg mb-2"
+              className="font-poppins font-bold text-[#0A192F] text-lg mb-2"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
-              {clinic.name}
+              {clinic.doctorName || clinic.name}
             </p>
             <p
               className="font-inter text-[#1F2937] text-sm"
@@ -37,7 +37,7 @@ export default function Footer() {
               <li>
                 <a
                   href={telLink()}
-                  className="font-inter text-[#0F766E] text-sm transition-subtle hover:underline"
+                  className="font-inter text-[#0A192F] font-medium text-sm transition-subtle hover:underline"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {clinic.phone}
@@ -48,7 +48,7 @@ export default function Footer() {
                   href={waLink(WA_GENERAL)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-inter text-[#0F766E] text-sm transition-subtle hover:underline"
+                  className="font-inter text-[#0A192F] font-medium text-sm transition-subtle hover:underline"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   WhatsApp Us
@@ -104,7 +104,7 @@ export default function Footer() {
               <Link
                 key={to}
                 to={to}
-                className="font-inter text-[#0F766E] text-xs transition-subtle hover:underline"
+                className="font-inter text-[#0A192F] font-medium text-xs transition-subtle hover:underline"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 {label}

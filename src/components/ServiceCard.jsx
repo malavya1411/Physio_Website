@@ -9,7 +9,7 @@ export default function ServiceCard({ service }) {
     <div className="bg-white rounded-2xl card-shadow p-6 flex flex-col gap-4 transition-subtle hover:shadow-md hover:-translate-y-0.5">
       {/* Icon */}
       <div
-        className="w-12 h-12 text-[#0F766E]"
+        className="w-12 h-12 text-[#0A192F]"
         dangerouslySetInnerHTML={{ __html: icon }}
         aria-hidden="true"
       />
@@ -44,7 +44,7 @@ export default function ServiceCard({ service }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Book ${title} on WhatsApp`}
-        className="w-full text-center bg-[#0F766E] text-white font-inter font-medium text-sm py-3 rounded-lg transition-subtle hover:bg-[#0d6560]"
+        className="w-full text-center bg-[#0A192F] text-white font-inter font-medium text-sm py-3 rounded-xl transition-all hover:bg-[#112240] shadow-sm"
         style={{ fontFamily: 'Inter, sans-serif' }}
       >
         Book on WhatsApp

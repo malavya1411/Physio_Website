@@ -26,7 +26,7 @@ export default function Contact() {
               <a
                 href={telLink()}
                 aria-label="Call the clinic"
-                className="font-poppins font-bold text-[#0F766E] text-3xl transition-subtle hover:underline block"
+                className="font-poppins font-bold text-[#0A192F] text-3xl transition-all hover:underline block"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {clinic.phone}
@@ -46,7 +46,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open WhatsApp"
-                className="font-inter font-medium text-[#0F766E] text-base transition-subtle hover:underline"
+                className="font-inter font-medium text-[#0A192F] text-base transition-all hover:underline"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Message us on WhatsApp →
@@ -104,21 +104,21 @@ export default function Contact() {
 
           {/* Right — map placeholder card */}
           <div className="bg-white rounded-2xl card-shadow overflow-hidden flex flex-col">
-            {/* Grayscale map embed — fallback to info card if no URL */}
+            {/* Map card */}
             <div
-              className="flex-1 bg-[#F0FDFA] flex flex-col items-center justify-center gap-4 p-8 min-h-64"
+              className="flex-1 bg-[#EFF6FF] flex flex-col items-center justify-center gap-4 p-8 min-h-64"
               aria-label="Map placeholder — serving Mumbai and Suburbs"
             >
               <svg
                 viewBox="0 0 80 80"
-                className="w-16 h-16 text-[#0F766E]"
+                className="w-16 h-16 text-[#0A192F]"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
                 <circle cx="40" cy="34" r="14" stroke="currentColor" strokeWidth="4"/>
                 <path d="M40 20V34M40 34l10-7" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                <path d="M40 48c0 0-18 16-18 28h36C58 64 40 48 40 48z" fill="#CCFBF1" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"/>
+                <path d="M40 48c0 0-18 16-18 28h36C58 64 40 48 40 48z" fill="#DBEAFE" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"/>
               </svg>
               <p
                 className="font-poppins font-semibold text-[#1F2937] text-lg text-center"
@@ -136,7 +136,7 @@ export default function Contact() {
                 href={`https://maps.google.com/?q=Mumbai`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-inter font-medium text-[#0F766E] text-sm transition-subtle hover:underline"
+                className="font-inter font-medium text-[#0A192F] text-sm transition-all hover:underline"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 View on Google Maps →

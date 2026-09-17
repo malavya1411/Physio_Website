@@ -33,7 +33,7 @@ export default function Message() {
   }
 
   const inputBase =
-    'w-full font-inter text-[#1F2937] text-sm bg-white border border-[#1F2937]/20 rounded-lg px-4 py-3 transition-subtle focus:border-[#0F766E] focus:ring-1 focus:ring-[#0F766E] outline-none'
+    'w-full font-inter text-[#1F2937] text-sm bg-white border border-[#1F2937]/20 rounded-xl px-4 py-3 transition-all focus:border-[#0A192F] focus:ring-1 focus:ring-[#0A192F] outline-none'
 
   return (
     <div className="page-wrapper py-16 px-4 sm:px-6 lg:px-8">
@@ -134,7 +134,7 @@ export default function Message() {
             <button
               id="msg-submit"
               type="submit"
-              className="w-full bg-[#0F766E] text-white font-inter font-medium text-base py-3.5 rounded-lg transition-subtle hover:bg-[#0d6560]"
+              className="w-full bg-[#0A192F] text-white font-inter font-medium text-base py-3.5 rounded-xl transition-all hover:bg-[#112240] shadow-sm"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Send on WhatsApp
@@ -147,7 +147,7 @@ export default function Message() {
               id="msg-call-instead"
               href={telLink()}
               aria-label="Call instead of WhatsApp"
-              className="flex-1 text-center border border-[#0F766E] text-[#0F766E] font-inter font-medium text-sm py-3 rounded-lg transition-subtle hover:bg-[#0F766E] hover:text-white"
+              className="flex-1 text-center border border-[#0A192F] text-[#0A192F] font-inter font-medium text-sm py-3 rounded-xl transition-all hover:bg-[#0A192F] hover:text-white"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Call instead
@@ -158,7 +158,7 @@ export default function Message() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open WhatsApp directly"
-              className="flex-1 text-center border border-[#0F766E] text-[#0F766E] font-inter font-medium text-sm py-3 rounded-lg transition-subtle hover:bg-[#0F766E] hover:text-white"
+              className="flex-1 text-center border border-[#0A192F] text-[#0A192F] font-inter font-medium text-sm py-3 rounded-xl transition-all hover:bg-[#0A192F] hover:text-white"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Open WhatsApp directly

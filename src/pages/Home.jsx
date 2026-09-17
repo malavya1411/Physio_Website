@@ -106,7 +106,7 @@ export default function Home() {
                 </p>
                 <p className="font-inter text-[11px] sm:text-xs text-[#111827] font-semibold mt-0.5 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
                   Call:{' '}
-                  <a href={telLink()} className="hover:text-[#0F766E] transition-colors underline underline-offset-2">
+                  <a href={telLink()} className="hover:text-[#0A192F] transition-colors underline underline-offset-2">
                     {clinic.displayPhone || clinic.phone}
                   </a>
                 </p>
@@ -238,7 +238,7 @@ export default function Home() {
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-2xl card-shadow">
                 <span
-                  className="font-poppins font-bold text-[#0F766E] text-4xl"
+                  className="font-poppins font-bold text-[#0A192F] text-4xl"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   {num}
@@ -271,7 +271,7 @@ export default function Home() {
             />
             <Link
               to="/services"
-              className="font-inter font-medium text-[#0F766E] text-sm border border-[#0F766E] px-4 py-2 rounded-lg transition-subtle hover:bg-[#0F766E] hover:text-white flex-shrink-0 self-start"
+              className="font-inter font-medium text-[#0A192F] text-sm border border-[#0A192F] px-4 py-2 rounded-xl transition-all hover:bg-[#0A192F] hover:text-white flex-shrink-0 self-start"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               View all services →
@@ -295,7 +295,7 @@ export default function Home() {
             />
             <Link
               to="/testimonials"
-              className="font-inter font-medium text-[#0F766E] text-sm border border-[#0F766E] px-4 py-2 rounded-lg transition-subtle hover:bg-[#0F766E] hover:text-white flex-shrink-0 self-start"
+              className="font-inter font-medium text-[#0A192F] text-sm border border-[#0A192F] px-4 py-2 rounded-xl transition-all hover:bg-[#0A192F] hover:text-white flex-shrink-0 self-start"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               View all →

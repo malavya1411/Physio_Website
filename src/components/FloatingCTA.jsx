@@ -35,7 +35,7 @@ export default function FloatingCTA() {
         <a
           href={telLink()}
           aria-label="Call the clinic"
-          className="flex-1 flex items-center justify-center gap-2 bg-[#0A192F] text-white font-inter font-medium text-sm py-3 px-4 rounded-xl active:scale-[0.98] transition-transform shadow-sm"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#0A192F] text-white font-inter font-medium text-sm py-3 px-4 rounded-xl active:scale-[0.98] transition-transform shadow-sm hover:bg-[#112240]"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           <PhoneIconWhite />
@@ -46,7 +46,7 @@ export default function FloatingCTA() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact on WhatsApp"
-          className="flex-1 flex items-center justify-center gap-2 bg-[#16A34A] text-white font-inter font-medium text-sm py-3 px-4 rounded-xl active:scale-[0.98] transition-transform shadow-sm"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#112240] text-white font-inter font-medium text-sm py-3 px-4 rounded-xl active:scale-[0.98] transition-transform shadow-sm hover:bg-[#1E293B] border border-[#1E293B]"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -63,7 +63,7 @@ export default function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact on WhatsApp"
-        className="hidden md:flex fixed bottom-7 right-7 z-50 w-12 h-12 rounded-full bg-[#0F766E] items-center justify-center shadow-[0_4px_20px_rgba(15,118,110,0.35)] transition-all duration-300 hover:scale-105 hover:bg-[#0d6560] active:scale-95"
+        className="hidden md:flex fixed bottom-7 right-7 z-50 w-12 h-12 rounded-full bg-[#0A192F] items-center justify-center shadow-[0_4px_20px_rgba(10,25,47,0.35)] transition-all duration-300 hover:scale-105 hover:bg-[#112240] active:scale-95 text-white"
       >
         <WhatsAppIconWhite />
       </a>

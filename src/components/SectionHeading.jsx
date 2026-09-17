@@ -18,7 +18,7 @@ export default function SectionHeading({ title, subtitle, centered = false }) {
           {subtitle}
         </p>
       )}
-      <div className={`mt-4 h-1 w-12 rounded-full bg-[#0F766E] ${centered ? 'mx-auto' : ''}`} />
+      <div className={`mt-4 h-1 w-12 rounded-full bg-[#0A192F] ${centered ? 'mx-auto' : ''}`} />
     </div>
   )
 }
