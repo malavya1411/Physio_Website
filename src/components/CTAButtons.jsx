@@ -35,6 +35,7 @@ export default function CTAButtons({
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
+    lg: 'px-7 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg',
   }
   const width = fullWidth ? 'w-full' : ''
 

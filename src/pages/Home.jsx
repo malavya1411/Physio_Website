@@ -37,39 +37,39 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="bg-[#FAFAF8] pt-16 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <section className="bg-[#FAFAF8] min-h-[calc(100vh-4rem)] flex items-center py-12 lg:py-0 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 py-8">
           {/* Text */}
-          <div className="flex-1 text-left">
+          <div className="flex-1 text-left max-w-2xl">
             <h1
-              className="font-poppins font-bold text-[#1F2937] leading-tight mb-4"
+              className="font-poppins font-bold text-[#1F2937] leading-[1.12] mb-6 tracking-tight"
               style={{
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                fontSize: 'clamp(2.5rem, 6vw, 4.25rem)',
               }}
             >
               {clinic.tagline}
             </h1>
             <p
-              className="font-lora italic text-[#1F2937] text-xl mb-8 max-w-lg"
+              className="font-lora italic text-[#1F2937] text-xl sm:text-2xl mb-10 max-w-xl leading-relaxed opacity-90"
               style={{ fontFamily: 'Lora, serif' }}
             >
               Expert physiotherapy at your door — no commute, no waiting rooms, just healing.
             </p>
-            <CTAButtons />
+            <CTAButtons size="lg" />
           </div>
 
           {/* Hero illustration */}
-          <div className="flex-1 flex justify-center lg:justify-end">
-            <div className="w-full max-w-sm bg-white rounded-3xl card-shadow p-8 flex flex-col items-center gap-4">
+          <div className="flex-1 flex justify-center lg:justify-end w-full">
+            <div className="w-full max-w-md lg:max-w-lg bg-white rounded-3xl card-shadow p-8 sm:p-12 flex flex-col items-center gap-6">
               <svg
                 viewBox="0 0 200 200"
-                className="w-48 h-48 text-[#0F766E]"
+                className="w-56 h-56 sm:w-64 sm:h-64 text-[#0F766E]"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-label="Physiotherapist illustration"
               >
-                {/* Simple clean house + medical cross illustration */}
+                {/* Clean house + medical cross illustration */}
                 <rect x="30" y="100" width="140" height="90" rx="8" fill="#F0FDFA" stroke="#0F766E" strokeWidth="3"/>
                 <polygon points="20,105 100,40 180,105" fill="#CCFBF1" stroke="#0F766E" strokeWidth="3"/>
                 <rect x="80" y="140" width="40" height="50" rx="4" fill="#0F766E"/>
@@ -83,13 +83,13 @@ export default function Home() {
               </svg>
               <div className="text-center">
                 <p
-                  className="font-poppins font-semibold text-[#0F766E] text-lg"
+                  className="font-poppins font-semibold text-[#0F766E] text-2xl"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   We come to you
                 </p>
                 <p
-                  className="font-inter text-[#1F2937] text-sm mt-1"
+                  className="font-inter text-[#1F2937] text-base sm:text-lg mt-2 font-medium"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {clinic.serviceAreas}
