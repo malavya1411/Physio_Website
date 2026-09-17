@@ -5,8 +5,11 @@
 
 const clinic = {
   name: 'PhysioHome Clinic',
-  tagline: 'Physiotherapy, at your doorstep.',
+  doctorName: 'Dr. Clara Evans',
+  doctorRole: 'Home Visit Physiotherapy',
+  tagline: 'Physiotherapy Care, At Your Doorstep.',
   phone: '+919876543210',           // ← replace with actual number
+  displayPhone: '+91 98765 43210',
   whatsapp: '919876543210',         // ← same number without the +
   email: 'hello@physiohome.in',
   hours: 'Mon – Sat: 8 AM – 7 PM',

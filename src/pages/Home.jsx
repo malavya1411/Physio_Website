@@ -37,112 +37,192 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-[#FAFAF8] min-h-[calc(100vh-4rem)] flex items-center py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Subtle background botanical line art */}
-        <svg
-          className="absolute -bottom-10 -left-10 w-72 h-72 text-[#0F766E]/[0.08] pointer-events-none select-none"
-          viewBox="0 0 200 200"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          aria-hidden="true"
-        >
-          <path d="M20,180 C40,110 100,50 180,20" />
-          <path d="M70,135 C60,110 80,90 105,95 C115,100 120,115 110,125 C95,140 75,140 70,135 Z" />
-          <path d="M120,85 C115,60 135,45 155,55 C165,65 165,80 150,90 C135,100 120,95 120,85 Z" />
-          <path d="M40,165 C30,145 45,130 65,135 C75,140 80,150 70,160 C60,170 45,170 40,165 Z" />
-        </svg>
+      <section className="relative bg-[#FAFAF8] pt-4 pb-8 sm:pt-8 sm:pb-12 lg:pt-14 lg:pb-16 px-3.5 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-[1240px] mx-auto w-full">
+          <div className="grid grid-cols-12 gap-3 sm:gap-6 lg:gap-12 items-start lg:items-center">
+            {/* Left Content Column (7 cols on mobile, 7 on desktop) */}
+            <div className="col-span-7 flex flex-col text-left pr-1 sm:pr-0">
+              {/* Pill Badge */}
+              <div className="mb-2 sm:mb-4">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EFF6FF] text-[#1E40AF] text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB]" />
+                  Physiotherapy • Home Visits
+                </span>
+              </div>
 
-        <div className="max-w-[1240px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 relative z-10">
-          {/* Left Text */}
-          <div className="flex-1 text-left max-w-xl">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2.5 mb-4">
-              <span className="w-6 h-[2px] bg-[#0F766E]/60 rounded-full" />
-              <span
-                className="font-inter font-semibold text-xs sm:text-[13px] tracking-widest text-[#0F766E] uppercase"
+              {/* Headline */}
+              <h1
+                className="font-serif font-bold text-[#0A192F] leading-[1.1] mb-2 sm:mb-4 tracking-tight text-[22px] sm:text-3xl md:text-4xl lg:text-[50px]"
+                style={{ fontFamily: 'Georgia, Cambria, serif' }}
+              >
+                Physiotherapy<br />
+                Care, At Your<br />
+                Doorstep.
+              </h1>
+
+              {/* Subtext */}
+              <p
+                className="font-inter text-[#4B5563] text-[12px] sm:text-sm lg:text-base mb-3 sm:mb-6 max-w-md leading-snug sm:leading-relaxed font-normal"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
-                Care Comes Home
-              </span>
-            </div>
+                Personalized physiotherapy sessions in the comfort of your home.
+              </p>
 
-            {/* Headline */}
-            <h1
-              className="font-poppins font-bold text-[#111827] leading-[1.08] mb-5 tracking-tight"
-              style={{
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: 'clamp(2.5rem, 5.5vw, 3.85rem)',
-              }}
-            >
-              Physiotherapy,<br />at your doorstep.
-            </h1>
-
-            {/* Supporting sentence */}
-            <p
-              className="font-lora italic text-[#374151] text-lg sm:text-xl lg:text-[22px] leading-relaxed mb-8 max-w-lg font-normal opacity-90"
-              style={{ fontFamily: 'Lora, serif' }}
-            >
-              Expert physiotherapy at home,<br className="hidden sm:inline" /> without the commute.
-            </p>
-
-            {/* CTAs */}
-            <CTAButtons size="lg" />
-          </div>
-
-          {/* Right Visual */}
-          <div className="flex-1 flex justify-center lg:justify-end w-full relative">
-            {/* Soft muted background glow */}
-            <div className="absolute -top-6 -right-6 w-64 h-64 bg-[#CCFBF1]/40 rounded-full blur-3xl pointer-events-none -z-10" />
-            <div className="absolute -bottom-6 -left-6 w-56 h-56 bg-[#0F766E]/[0.08] rounded-full blur-2xl pointer-events-none -z-10" />
-
-            {/* Organic rounded image container */}
-            <div className="relative w-full max-w-md lg:max-w-lg rounded-[2.25rem] sm:rounded-[2.5rem] overflow-hidden shadow-[0_10px_35px_rgb(0,0,0,0.06)] border border-[#1F2937]/[0.06] bg-white group">
-              <img
-                src="/hero-physio.jpg"
-                alt="Physiotherapist assisting senior patient at home"
-                className="w-full h-auto object-cover max-h-[440px] sm:max-h-[490px] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                width="600"
-                height="450"
-                loading="eager"
-              />
-
-              {/* Understated Location Pill */}
-              <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 bg-[#FAFAF8]/95 backdrop-blur-md border border-white/80 px-4 py-2.5 rounded-full shadow-sm flex items-center justify-center gap-2">
-                <svg className="w-4 h-4 text-[#0F766E] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path fillRule="evenodd" d="M11.54 22.351A24.25 24.25 0 0 0 18 13.917C18 9.544 14.418 6 10 6S2 9.544 2 13.917a24.25 24.25 0 0 0 6.46 8.434.75.75 0 0 0 1.08 0l2-2zM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5z" clipRule="evenodd" />
-                </svg>
-                <span
-                  className="font-inter text-xs sm:text-[13px] font-medium text-[#1F2937] tracking-tight"
+              {/* Action Buttons */}
+              <div className="flex flex-col gap-2 sm:gap-3 w-full sm:max-w-xs lg:max-w-md">
+                <a
+                  href={telLink()}
+                  aria-label="Call or WhatsApp"
+                  className="flex items-center justify-center gap-1.5 sm:gap-2.5 bg-[#0A192F] text-white font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2.5 sm:py-3.5 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-[#112240] transition-all shadow-sm active:scale-[0.99]"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
-                  Home visits across Mumbai &amp; suburbs
-                </span>
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l1.01-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  Call / WhatsApp
+                </a>
+                <a
+                  href={waLink(WA_GENERAL)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book an Appointment"
+                  className="flex items-center justify-center gap-1.5 sm:gap-2.5 bg-white text-[#0A192F] border border-neutral-300 font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2.5 sm:py-3.5 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-neutral-50 transition-all shadow-sm active:scale-[0.99]"
+                  style={{ fontFamily: 'Inter, sans-serif' }}
+                >
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#0A192F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  Book an Appointment
+                </a>
+              </div>
+
+              {/* Direct Doctor Connect subtext */}
+              <div className="mt-2.5 sm:mt-4 pt-1">
+                <p className="font-inter text-[10px] sm:text-xs text-[#6B7280] leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Directly connect with the physiotherapist
+                </p>
+                <p className="font-inter text-[11px] sm:text-xs text-[#111827] font-semibold mt-0.5 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Call:{' '}
+                  <a href={telLink()} className="hover:text-[#0F766E] transition-colors underline underline-offset-2">
+                    {clinic.displayPhone || clinic.phone}
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            {/* Right Visual Column (5 cols on mobile, 5 on desktop) */}
+            <div className="col-span-5 flex flex-col justify-start relative pt-1">
+              {/* Background Geometric Graphic Tile */}
+              <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-4 w-28 sm:w-40 h-28 sm:h-40 opacity-40 pointer-events-none">
+                <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-[#CBD5E1]">
+                  <path d="M0,0 Q50,0 50,50 Q0,50 0,0 Z" fill="currentColor" opacity="0.6"/>
+                  <path d="M50,0 Q100,0 100,50 Q50,50 50,0 Z" fill="currentColor" opacity="0.3"/>
+                  <path d="M50,50 Q100,50 100,100 Q50,100 50,50 Z" fill="currentColor" opacity="0.5"/>
+                  <path d="M0,50 Q50,50 50,100 Q0,100 0,50 Z" fill="currentColor" opacity="0.2"/>
+                </svg>
+              </div>
+
+              {/* Arched Portrait Card */}
+              <div className="relative w-full rounded-t-[2.25rem] sm:rounded-t-[3.5rem] rounded-b-xl sm:rounded-b-2xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.06)] border border-neutral-200/80 bg-white">
+                <img
+                  src="/doctor-portrait.jpg"
+                  alt="Doctor Clara Evans — Home Visit Physiotherapist"
+                  className="w-full h-auto object-cover aspect-[3/4] max-h-[260px] sm:max-h-[380px] lg:max-h-[480px]"
+                  width="480"
+                  height="640"
+                  loading="eager"
+                />
+
+                {/* Overlaid Consultation Pill */}
+                <div className="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-3 sm:left-3 sm:right-3 bg-white/95 backdrop-blur-md rounded-lg sm:rounded-xl p-1.5 sm:p-2.5 shadow-sm border border-neutral-100 flex items-center gap-1.5 sm:gap-2.5">
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] flex-shrink-0" />
+                  <div className="flex flex-col text-left overflow-hidden">
+                    <p className="font-poppins font-semibold text-[9px] sm:text-xs text-[#0A192F] leading-tight truncate" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      Home Consultations Active
+                    </p>
+                    <p className="font-inter text-[8px] sm:text-[10px] text-[#6B7280] font-normal leading-tight truncate" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      Direct Doctor Availability
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Trust Strip ──────────────────────────────── */}
-      <section className="bg-white border-y border-[#1F2937]/10 py-6 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6">
-          {trustItems.map(({ label, value }) => (
-            <div key={label} className="text-center">
-              <p
-                className="font-poppins font-bold text-[#0F766E] text-2xl"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                {value}
-              </p>
-              <p
-                className="font-inter font-medium text-[#1F2937] text-sm mt-0.5"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                {label}
+      {/* ── CARE AT HOME (3-Pillar Clean Section) ──────────────── */}
+      <section className="bg-white border-y border-neutral-200/70 py-8 sm:py-14 px-3.5 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] mx-auto">
+          {/* Eyebrow & Headline */}
+          <div className="text-left mb-6 sm:mb-10">
+            <span
+              className="font-inter font-semibold text-[10px] sm:text-xs tracking-widest text-[#6B7280] uppercase block mb-1.5"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Care At Home
+            </span>
+            <h2
+              className="font-serif font-bold text-[#0A192F] text-xl sm:text-2xl lg:text-3xl leading-snug"
+              style={{ fontFamily: 'Georgia, Cambria, serif' }}
+            >
+              Professional Care,<br />
+              Where You Feel Comfortable.
+            </h2>
+          </div>
+
+          {/* 3 Circular Icon Pillars (3 cols on mobile & desktop) */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-6">
+            {/* 1. Home Visits */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-1">
+              <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center mb-2 sm:mb-3 shadow-xs">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <h3 className="font-poppins font-semibold text-[#0A192F] text-xs sm:text-sm mb-0.5 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Home Visits
+              </h3>
+              <p className="font-inter text-[#6B7280] text-[10px] sm:text-xs leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                Care in your comfort zone.
               </p>
             </div>
-          ))}
+
+            {/* 2. One-to-One Care */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-1">
+              <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center mb-2 sm:mb-3 shadow-xs">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h3 className="font-poppins font-semibold text-[#0A192F] text-xs sm:text-sm mb-0.5 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                One-to-One Care
+              </h3>
+              <p className="font-inter text-[#6B7280] text-[10px] sm:text-xs leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                Personal attention every session.
+              </p>
+            </div>
+
+            {/* 3. Personalized Recovery */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-1">
+              <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center mb-2 sm:mb-3 shadow-xs">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <h3 className="font-poppins font-semibold text-[#0A192F] text-xs sm:text-sm mb-0.5 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Personalized Recovery
+              </h3>
+              <p className="font-inter text-[#6B7280] text-[10px] sm:text-xs leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                Treatment tailored to your goals.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

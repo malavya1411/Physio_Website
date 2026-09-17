@@ -42,12 +42,26 @@ export default function Navbar() {
           {/* Brand */}
           <Link
             to="/"
-            className="font-poppins text-xl sm:text-[22px] tracking-tight flex items-center gap-1"
-            style={{ fontFamily: 'Poppins, sans-serif' }}
+            className="flex items-center gap-3"
             onClick={() => setMenuOpen(false)}
           >
-            <span className="font-bold text-[#0F766E]">PhysioHome</span>
-            <span className="font-normal text-[#1F2937]">Clinic</span>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#0A192F] text-white flex items-center justify-center font-serif text-lg font-semibold shadow-sm flex-shrink-0">
+              {clinic.doctorName ? clinic.doctorName.replace(/^Dr\.\s*/, '').charAt(0) : 'P'}
+            </div>
+            <div className="flex flex-col text-left">
+              <span
+                className="font-poppins font-bold text-sm sm:text-[15px] text-[#0A192F] tracking-tight leading-tight"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                {clinic.doctorName}
+              </span>
+              <span
+                className="font-inter text-[11px] sm:text-xs text-[#6B7280] font-normal leading-tight"
+                style={{ fontFamily: 'Inter, sans-serif' }}
+              >
+                {clinic.doctorRole}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}
