@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import FloatingCTA from './components/FloatingCTA.jsx'
@@ -11,6 +12,7 @@ import Contact from './pages/Contact.jsx'
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-[#FAFAF8]">
         <Navbar />
         <main className="flex-1">
