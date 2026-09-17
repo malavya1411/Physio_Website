@@ -5,7 +5,7 @@
 
 const clinic = {
   name: 'PhysioHome Clinic',
-  doctorName: 'Dr. Clara Evans',
+  doctorName: 'Dr. Sakshi Narkar',
   doctorRole: 'Home Visit Physiotherapy',
   tagline: 'Physiotherapy Care, At Your Doorstep.',
   phone: '+919876543210',           // ← replace with actual number

@@ -37,22 +37,22 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-[#FAFAF8] pt-4 pb-8 sm:pt-8 sm:pb-12 lg:pt-14 lg:pb-16 px-3.5 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-[1240px] mx-auto w-full">
-          <div className="grid grid-cols-12 gap-3 sm:gap-6 lg:gap-12 items-start lg:items-center">
+      <section className="relative bg-[#FAFAF8] min-h-[calc(100dvh-4rem)] lg:h-[calc(100vh-4rem)] flex items-center py-4 sm:py-6 lg:py-0 px-3.5 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-[1240px] mx-auto w-full my-auto">
+          <div className="grid grid-cols-12 gap-3 sm:gap-6 lg:gap-10 xl:gap-12 items-center">
             {/* Left Content Column (7 cols on mobile, 7 on desktop) */}
             <div className="col-span-7 flex flex-col text-left pr-1 sm:pr-0">
               {/* Pill Badge */}
-              <div className="mb-2 sm:mb-4">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EFF6FF] text-[#1E40AF] text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
-                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB]" />
+              <div className="mb-2 sm:mb-3 lg:mb-4">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EFF6FF] text-[#1E40AF] text-[11px] sm:text-xs lg:text-[13px] font-semibold tracking-wider uppercase">
+                  <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-[#2563EB]" />
                   Physiotherapy • Home Visits
                 </span>
               </div>
 
               {/* Headline */}
               <h1
-                className="font-serif font-bold text-[#0A192F] leading-[1.1] mb-2 sm:mb-4 tracking-tight text-[22px] sm:text-3xl md:text-4xl lg:text-[50px]"
+                className="font-serif font-bold text-[#0A192F] leading-[1.06] mb-2.5 sm:mb-4 lg:mb-5 tracking-tight text-[26px] sm:text-4xl md:text-5xl lg:text-[54px] xl:text-[62px]"
                 style={{ fontFamily: 'Georgia, Cambria, serif' }}
               >
                 Physiotherapy<br />
@@ -62,18 +62,18 @@ export default function Home() {
 
               {/* Subtext */}
               <p
-                className="font-inter text-[#4B5563] text-[12px] sm:text-sm lg:text-base mb-3 sm:mb-6 max-w-md leading-snug sm:leading-relaxed font-normal"
+                className="font-inter text-[#4B5563] text-[13px] sm:text-base lg:text-[17px] xl:text-[18px] mb-3 sm:mb-5 lg:mb-6 max-w-lg leading-snug sm:leading-relaxed font-normal"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Personalized physiotherapy sessions in the comfort of your home.
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-col gap-2 sm:gap-3 w-full sm:max-w-xs lg:max-w-md">
+              <div className="flex flex-col gap-2 sm:gap-2.5 lg:gap-3 w-full sm:max-w-xs lg:max-w-sm">
                 <a
                   href={telLink()}
                   aria-label="Call or WhatsApp"
-                  className="flex items-center justify-center gap-1.5 sm:gap-2.5 bg-[#0A192F] text-white font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2.5 sm:py-3.5 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-[#112240] transition-all shadow-sm active:scale-[0.99]"
+                  className="flex items-center justify-center gap-1.5 sm:gap-2 bg-[#0A192F] text-white font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2.5 sm:py-3 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-[#112240] transition-all shadow-sm active:scale-[0.99]"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -86,7 +86,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Book an Appointment"
-                  className="flex items-center justify-center gap-1.5 sm:gap-2.5 bg-white text-[#0A192F] border border-neutral-300 font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2.5 sm:py-3.5 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-neutral-50 transition-all shadow-sm active:scale-[0.99]"
+                  className="flex items-center justify-center gap-1.5 sm:gap-2 bg-white text-[#0A192F] border border-neutral-300 font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2.5 sm:py-3 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-neutral-50 transition-all shadow-sm active:scale-[0.99]"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#0A192F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -100,7 +100,7 @@ export default function Home() {
               </div>
 
               {/* Direct Doctor Connect subtext */}
-              <div className="mt-2.5 sm:mt-4 pt-1">
+              <div className="mt-2.5 sm:mt-3 pt-0.5">
                 <p className="font-inter text-[10px] sm:text-xs text-[#6B7280] leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
                   Directly connect with the physiotherapist
                 </p>
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
 
             {/* Right Visual Column (5 cols on mobile, 5 on desktop) */}
-            <div className="col-span-5 flex flex-col justify-start relative pt-1">
+            <div className="col-span-5 flex flex-col justify-center relative">
               {/* Background Geometric Graphic Tile */}
               <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-4 w-28 sm:w-40 h-28 sm:h-40 opacity-40 pointer-events-none">
                 <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-[#CBD5E1]">
@@ -126,11 +126,11 @@ export default function Home() {
               </div>
 
               {/* Arched Portrait Card */}
-              <div className="relative w-full rounded-t-[2.25rem] sm:rounded-t-[3.5rem] rounded-b-xl sm:rounded-b-2xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.06)] border border-neutral-200/80 bg-white">
+              <div className="relative w-full rounded-t-[2.25rem] sm:rounded-t-[3.5rem] rounded-b-xl sm:rounded-b-2xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.06)] border border-neutral-200/80 bg-white max-w-[420px] mx-auto">
                 <img
                   src="/doctor-portrait.jpg"
-                  alt="Doctor Clara Evans — Home Visit Physiotherapist"
-                  className="w-full h-auto object-cover aspect-[3/4] max-h-[260px] sm:max-h-[380px] lg:max-h-[480px]"
+                  alt={`${clinic.doctorName} — Home Visit Physiotherapist`}
+                  className="w-full h-auto object-cover aspect-[3/4] max-h-[240px] sm:max-h-[320px] md:max-h-[380px] lg:max-h-[calc(100vh-13rem)] xl:max-h-[460px]"
                   width="480"
                   height="640"
                   loading="eager"
