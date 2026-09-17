@@ -37,22 +37,22 @@ export default function Home() {
   return (
     <div className="page-wrapper">
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-[#FAFAF8] min-h-[calc(100dvh-4rem)] lg:h-[calc(100vh-4rem)] flex items-center py-4 sm:py-6 lg:py-0 px-3.5 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-[1240px] mx-auto w-full my-auto">
+      <section className="relative bg-[#FAFAF8] pt-5 pb-8 sm:pt-8 sm:pb-12 lg:py-0 lg:min-h-[calc(100vh-4rem)] lg:flex lg:items-center px-3.5 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-[1240px] mx-auto w-full lg:my-auto">
           <div className="grid grid-cols-12 gap-3 sm:gap-6 lg:gap-10 xl:gap-12 items-center">
             {/* Left Content Column (7 cols on mobile, 7 on desktop) */}
             <div className="col-span-7 flex flex-col text-left pr-1 sm:pr-0">
               {/* Pill Badge */}
               <div className="mb-2 sm:mb-3 lg:mb-4">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#EFF6FF] text-[#1E40AF] text-[11px] sm:text-xs lg:text-[13px] font-semibold tracking-wider uppercase">
-                  <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-[#2563EB]" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#EFF6FF] text-[#1E40AF] text-[10px] sm:text-xs lg:text-[13px] font-semibold tracking-wider uppercase whitespace-nowrap">
+                  <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-[#2563EB] flex-shrink-0" />
                   Physiotherapy • Home Visits
                 </span>
               </div>
 
               {/* Headline */}
               <h1
-                className="font-serif font-bold text-[#0A192F] leading-[1.06] mb-2.5 sm:mb-4 lg:mb-5 tracking-tight text-[26px] sm:text-4xl md:text-5xl lg:text-[54px] xl:text-[62px]"
+                className="font-serif font-bold text-[#0A192F] leading-[1.2] lg:leading-[1.18] mb-2 sm:mb-3.5 lg:mb-5 tracking-tight text-[20px] sm:text-2xl md:text-3xl lg:text-[42px] xl:text-[48px]"
                 style={{ fontFamily: 'Georgia, Cambria, serif' }}
               >
                 Physiotherapy<br />
@@ -62,21 +62,21 @@ export default function Home() {
 
               {/* Subtext */}
               <p
-                className="font-inter text-[#4B5563] text-[13px] sm:text-base lg:text-[17px] xl:text-[18px] mb-3 sm:mb-5 lg:mb-6 max-w-lg leading-snug sm:leading-relaxed font-normal"
+                className="font-inter text-[#4B5563] text-[11px] sm:text-sm lg:text-base xl:text-lg mb-3 sm:mb-4 lg:mb-6 max-w-lg leading-snug sm:leading-relaxed font-normal"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Personalized physiotherapy sessions in the comfort of your home.
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 w-full sm:max-w-md">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:max-w-sm lg:max-w-md">
                 <a
                   href={telLink()}
                   aria-label="Call Now"
-                  className="flex-1 flex items-center justify-center gap-2 bg-[#0A192F] text-white font-inter font-medium text-[13px] sm:text-sm lg:text-base py-2.5 sm:py-3.5 px-4 sm:px-6 rounded-lg sm:rounded-xl hover:bg-[#112240] transition-all shadow-sm active:scale-[0.99]"
+                  className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 bg-[#0A192F] text-white font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2 sm:py-3 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-[#112240] transition-all shadow-sm active:scale-[0.99]"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l1.01-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
                   Call
@@ -86,10 +86,10 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="flex-1 flex items-center justify-center gap-2 bg-white text-[#0A192F] border border-neutral-300 font-inter font-medium text-[13px] sm:text-sm lg:text-base py-2.5 sm:py-3.5 px-4 sm:px-6 rounded-lg sm:rounded-xl hover:bg-neutral-50 hover:border-[#0A192F] transition-all shadow-sm active:scale-[0.99]"
+                  className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 bg-white text-[#0A192F] border border-neutral-300 font-inter font-medium text-[12px] sm:text-sm lg:text-base py-2 sm:py-3 px-3 sm:px-5 rounded-lg sm:rounded-xl hover:bg-neutral-50 hover:border-[#0A192F] transition-all shadow-sm active:scale-[0.99]"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#0A192F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#0A192F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                   </svg>
                   WhatsApp
@@ -97,7 +97,7 @@ export default function Home() {
               </div>
 
               {/* Direct Doctor Connect subtext */}
-              <div className="mt-2.5 sm:mt-3 pt-0.5">
+              <div className="mt-2 sm:mt-3 pt-0.5">
                 <p className="font-inter text-[10px] sm:text-xs text-[#6B7280] leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
                   Directly connect with the physiotherapist
                 </p>
@@ -127,7 +127,7 @@ export default function Home() {
                 <img
                   src="/doctor-portrait.jpg"
                   alt={`${clinic.doctorName} — Home Visit Physiotherapist`}
-                  className="w-full h-auto object-cover aspect-[3/4] max-h-[240px] sm:max-h-[320px] md:max-h-[380px] lg:max-h-[calc(100vh-13rem)] xl:max-h-[460px]"
+                  className="w-full h-auto object-cover aspect-[3/4] max-h-[220px] sm:max-h-[300px] md:max-h-[360px] lg:max-h-[440px] xl:max-h-[480px]"
                   width="480"
                   height="640"
                   loading="eager"
@@ -137,11 +137,11 @@ export default function Home() {
                 <div className="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-3 sm:left-3 sm:right-3 bg-white/95 backdrop-blur-md rounded-lg sm:rounded-xl p-1.5 sm:p-2.5 shadow-sm border border-neutral-100 flex items-center gap-1.5 sm:gap-2.5">
                   <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] flex-shrink-0" />
                   <div className="flex flex-col text-left overflow-hidden">
-                    <p className="font-poppins font-semibold text-[9px] sm:text-xs text-[#0A192F] leading-tight truncate" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                      Home Consultations Active
+                    <p className="font-poppins font-semibold text-[8.5px] sm:text-xs text-[#0A192F] leading-tight truncate" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      Home Visits Active
                     </p>
-                    <p className="font-inter text-[8px] sm:text-[10px] text-[#6B7280] font-normal leading-tight truncate" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      Direct Doctor Availability
+                    <p className="font-inter text-[7.5px] sm:text-[10px] text-[#6B7280] font-normal leading-tight truncate" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      Available in Mumbai
                     </p>
                   </div>
                 </div>
