@@ -152,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* ── CARE AT HOME (3-Pillar Clean Section) ──────────────── */}
-      <section className="bg-white border-y border-neutral-200/70 py-8 sm:py-14 px-3.5 sm:px-6 lg:px-8">
+      <section className="bg-white border-y border-neutral-200/70 py-8 sm:py-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1240px] mx-auto">
           {/* Eyebrow & Headline */}
           <div className="text-left mb-6 sm:mb-10">
@@ -171,53 +171,59 @@ export default function Home() {
             </h2>
           </div>
 
-          {/* 3 Circular Icon Pillars (3 cols on mobile & desktop) */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-6">
+          {/* 3 Circular Icon Pillars (1 col cards on mobile, 3 cols on desktop) */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6">
             {/* 1. Home Visits */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-1">
-              <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center mb-2 sm:mb-3 shadow-xs">
-                <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <div className="flex flex-row items-center sm:items-start text-left gap-3.5 sm:gap-0 sm:flex-col p-3.5 sm:p-0 rounded-xl sm:rounded-none bg-[#F8FAFC] sm:bg-transparent border border-slate-100 sm:border-0 transition-all">
+              <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center flex-shrink-0 sm:mb-3 shadow-xs">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                   <polyline points="9 22 9 12 15 12 15 22"/>
                 </svg>
               </div>
-              <h3 className="font-poppins font-semibold text-[#0A192F] text-xs sm:text-sm mb-0.5 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Home Visits
-              </h3>
-              <p className="font-inter text-[#6B7280] text-[10px] sm:text-xs leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Care in your comfort zone.
-              </p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-poppins font-semibold text-[#0A192F] text-sm sm:text-base mb-0.5 leading-snug" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Home Visits
+                </h3>
+                <p className="font-inter text-[#6B7280] text-xs sm:text-sm leading-normal" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Care in your comfort zone.
+                </p>
+              </div>
             </div>
 
             {/* 2. One-to-One Care */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-1">
-              <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center mb-2 sm:mb-3 shadow-xs">
-                <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <div className="flex flex-row items-center sm:items-start text-left gap-3.5 sm:gap-0 sm:flex-col p-3.5 sm:p-0 rounded-xl sm:rounded-none bg-[#F8FAFC] sm:bg-transparent border border-slate-100 sm:border-0 transition-all">
+              <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center flex-shrink-0 sm:mb-3 shadow-xs">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                   <circle cx="12" cy="7" r="4"/>
                 </svg>
               </div>
-              <h3 className="font-poppins font-semibold text-[#0A192F] text-xs sm:text-sm mb-0.5 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                One-to-One Care
-              </h3>
-              <p className="font-inter text-[#6B7280] text-[10px] sm:text-xs leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Personal attention every session.
-              </p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-poppins font-semibold text-[#0A192F] text-sm sm:text-base mb-0.5 leading-snug" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  One-to-One Care
+                </h3>
+                <p className="font-inter text-[#6B7280] text-xs sm:text-sm leading-normal" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Personal attention every session.
+                </p>
+              </div>
             </div>
 
             {/* 3. Personalized Recovery */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-1">
-              <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center mb-2 sm:mb-3 shadow-xs">
-                <svg className="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <div className="flex flex-row items-center sm:items-start text-left gap-3.5 sm:gap-0 sm:flex-col p-3.5 sm:p-0 rounded-xl sm:rounded-none bg-[#F8FAFC] sm:bg-transparent border border-slate-100 sm:border-0 transition-all">
+              <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center flex-shrink-0 sm:mb-3 shadow-xs">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                 </svg>
               </div>
-              <h3 className="font-poppins font-semibold text-[#0A192F] text-xs sm:text-sm mb-0.5 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Personalized Recovery
-              </h3>
-              <p className="font-inter text-[#6B7280] text-[10px] sm:text-xs leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Treatment tailored to your goals.
-              </p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-poppins font-semibold text-[#0A192F] text-sm sm:text-base mb-0.5 leading-snug" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Personalized Recovery
+                </h3>
+                <p className="font-inter text-[#6B7280] text-xs sm:text-sm leading-normal" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Treatment tailored to your goals.
+                </p>
+              </div>
             </div>
           </div>
         </div>
